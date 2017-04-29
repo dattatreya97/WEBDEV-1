@@ -1,0 +1,22 @@
+$dbc=mysqli_connect("localhost","root","","RevelsTest") or die("can't connect");
+
+SELECT * FROM delegate_card_generation
+
+INSERT INTO Football (teamID,gender,delegate_numbers) VALUES ('".$newteamID."','".$gender."' ,'".$alldelegate."''
+
+INSERT INTO Basketball (teamID,gender,delegate_numbers) VALUES ('".$newteamID."','".$gender."' ,'".$alldelegate."'
+
+
+INSERT INTO delegate_card_generation (delegate_number,Name,RegNo,College,email,phone,Gender)VALUES (".$newdelnumber.",'".$name."','".$RegNo."','".$college."','".$email."',".$phone.",'".$gender."'
+
+SELECT * FROM delegate_card_generation WHERE Name = '$name'
+
+SELECT * FROM delegate_card_generation WHERE RegNo = '$RegNo'
+
+SELECT * FROM Football WHERE teamID = '$teamID'
+
+SELECT * FROM Football WHERE teamID = '$teamID'
+
+SELECT * FROM delegate_card_generation WHERE delegate_number = '$delegate_number'
+
+INSERT INTO winners VALUES('".$sport."','".$teamid."','$pos')

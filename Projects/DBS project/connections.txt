@@ -1,0 +1,24 @@
+session_start();
+
+$dbc=mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die("can't connect");
+
+$query1 = "SELECT * FROM Basketball";
+$result1 = mysqli_query($dbc,$query1) or die(mysqli_error($dbc));
+
+$_SESSION['teamID']=$newteamID;
+						$_SESSION['alldelegate']=$alldelegate;
+						$_SESSION['gender']='male';
+						$_SESSION['sport']='basketball';
+
+
+$data = "";
+$i=0;
+
+while ($row = mysqli_fetch_array($result)) {
+	$data[$i]['name'] = $row['Name'];
+	$data[$i]['RegNo'] = $row['RegNo'];
+	$i++;
+}
+
+$js = json_encode($data);
+
